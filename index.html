@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/ApSyWebNaranja.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Encriptador de Texto</title>
+    
+</head>
+<body>
+
+    <header>
+        <div class="cabezera">
+            <h1>
+                <img src="img/LogoAlura.png" alt="Logo Alura">
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="encriptar">
+            <textarea class="texto-encriptar" placeholder="Ingrese el Texto Aquí"></textarea>
+            <div class="mensaje-texto">
+                <img class="img-aviso" src="img/MensajeText.svg" alt="Mensaje del Texto a Encriptar" >
+                <!-- <p class="texto-aviso">Solo letras minúsculas y sin acentos</p> -->
+                <p class="texto-alerta">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <button onclick="encriptando();" class="boton-encriptar">Encriptar</button>
+                <button type="submit" class="boton-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="tarjeta-salida">
+           <div class="tarjeta-contenedor">
+                <img class="img-muneco"src="img/Muñeco.png" alt="Imagen Muñeco" >
+                <p class="texto-uno">Ningún mensaje fue encontrado</p>
+                <p class="texto-dos">Ingrese el texto que deseas encriptar o desencriptar</p>
+           </div>
+           <textarea class="texto-salida" type="mensaje"  readonly></textarea>
+           <button type="submit" class="boton-copiar">Copiar</button>
+         </section>  
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p class="copyright">&copy; copyright 2024. Todos los derechos reservado - Encriptador de Texto - Autor Mario Valerdi</p>
+        <a href="https://linkedin.com/in/MarioValerdi" target="_blank" rel="noopener">
+            <img class="icolinkedin" src="img/linkedin.svg" alt="Logo Linkedin" >
+        </a>
+        <a href="https://github.com/MAValerdi/ONE-Numero-Secreto" target="_blank" rel="noopener">
+            <img class="icogithub" src="img/github.svg" alt="Logo Github" >
+        </a>
+        <a href="#"></a>
+    </footer>
+
+   
+
+    <script src="encriptardo.js"></script>
+
+</body>
+
+
+</html>
