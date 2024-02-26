@@ -288,6 +288,7 @@ footer{
 
 /* Responsive*/
 @media screen and (max-width: 780px){
+    
     main{
         display: flex;
         flex-direction: column;
@@ -296,13 +297,12 @@ footer{
     }
 
     .encriptar{
-        margin: 168px 0px 0px 0px;
+        margin: 150px 0px 0px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
-
 
     .texto-encriptar{
         width: auto;
@@ -369,17 +369,24 @@ footer{
     }
 
     .encriptar{
-        width:  90%;
+        /* margin: 100px 0px 0px 10px; */
+        /* display: flex; */
+        /* align-items: left; */
         font-size: 24px;
+        width: 90%;
     }
-
+    
     .texto-encriptar{
-        width: auto;
+        width: 90%;
     }
 
     .botones{
         display: grid;
         gap: 21px;
+    }
+
+    .img-muneco{
+        display: flex;
     }
 
     .tarjeta-salida{
