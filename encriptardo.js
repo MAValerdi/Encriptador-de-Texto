@@ -68,7 +68,7 @@ function encriptando() {
 
     //pongo el foco en el bóton copiar
     cBotCopiar.focus();
-    
+
 
     return cajatexto;
     
@@ -133,6 +133,10 @@ function desEncriptando(cajatexto) {
 
     //pongo el texto en la caja de salida
     varTextoSalida.value = cajatexto;
+
+    //pongo el foco en el bóton copiar
+    cBotCopiar.focus();
+    
 
     return cajatexto;
     
