@@ -21,6 +21,16 @@ const matrizRemplazo = [
 cTextoEncriptar.focus();
 
 
+//actualiza el texto de alerta para el usuairo
+cTextoEncriptar.addEventListener("input", updateValue);
+
+function updateValue() {
+    console.log(cTextoEncriptar.value + " texto a encripar dentro de upadatevalue");
+    varAlerta.style.color = "#495057";
+    varAlerta.textContent = "Solo letras minúsculas y sin acentos";
+}
+
+
 // funcion encriptar
 
 cBotEncriptar.addEventListener("click", encriptando);
@@ -117,9 +127,8 @@ function desEncriptando(cajatexto) {
 
 
     //inicia la DesEncripcion
-    for (let i = 0; i < matrizRemplazo.length; i++){
-        console.log(matrizRemplazo[i][0]);
-        if (cajatexto.includes(matrizRemplazo[i][0])) {
+    for (let i = matrizRemplazo.length -1 ; i >= 0; i--){
+        if (cajatexto.includes(matrizRemplazo[i][1])) {
             cajatexto = cajatexto.replaceAll(
                 matrizRemplazo[i][1],
                 matrizRemplazo[i][0]
@@ -154,8 +163,8 @@ function encuetraEspeciales(cajatexto) {
         encontroEspeciales = encontroEspeciales.concat(cajatexto.match(caracteresEspeciales));
         
         if (encontroEspeciales.length > 0) {
-            varAlerta.style.color = "#ff0000"
-            varAlerta.textContent = "No se permiten caracteres especiales, Intente de nuevo por favor!"
+            varAlerta.style.color = "#ff0000";
+            varAlerta.textContent = "No se permiten caracteres especiales, Intente de nuevo por favor!";
             cTextoEncriptar.focus();
             cajatexto = "";
             return false;
@@ -177,8 +186,8 @@ function encuetraMayusculas(cajatexto) {
 
         if (encontroMayusculas.length > 0) {
             console.log("Tiene Mayusculas");
-            varAlerta.style.color = "#ff0000"
-            varAlerta.textContent = "No se permiten Mayusculas, Intente de nuevo por favor!"
+            varAlerta.style.color = "#ff0000";
+            varAlerta.textContent = "No se permiten Mayusculas, Intente de nuevo por favor!";
             cTextoEncriptar.focus();
             cajatexto = "";
             return false;
